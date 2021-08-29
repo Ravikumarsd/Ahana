@@ -5,17 +5,18 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     overflow: 'visible',
-    maxWidth: 420
+    height:"275px"
   },
   column: {
     display: 'flex',
     overflow: 'visible',
     flexDirection: 'column-reverse',
-    height: 420
+    width: '420px',
+    textAlign:'center'
   },
   textContainer: {
     alignSelf: 'center',
-    padding: theme.spacing(2)
+    padding: theme.spacing(4)
   },
   name: {
     fontWeight: '400',
@@ -35,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   certificate: {
     fontSize: '12px',
     color: '#666666',
-    lineHeight: '1.8'
+    lineHeight: '1.8',
   },
   imageContainer: {
     position: 'relative',
@@ -43,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     top: '-25px'
   }
 }))
-export const AboutSwiperCard = () => {
+export const AboutSwiperCard = ({image}) => {
   const classes = useStyles()
   const matches = useMediaQuery('(min-width:960px)')
   const match800 = useMediaQuery('(min-width:800px)') //row
@@ -64,15 +65,16 @@ export const AboutSwiperCard = () => {
       <div className={classes.textContainer}>
         <div className={classes.name}>Lori Kenedy</div>
         <div className={classes.role}>Yoga trainer</div>
+        <div className={classes.certificate}>Yoga & Therapy Certificate of</div>
         <div className={classes.certificate}>
-          Yoga & Therapy Certificate of Uttarakhand University Sanskrit
+          Uttarakhand University Sanskrit
         </div>
         <div>
           <SocialIcons />
         </div>
       </div>
       <div className={classes.imageContainer}>
-        <img src='../img/trainer/1.png' alt='' />
+        <img style={{height:"300px"}} src={image} alt='' />
       </div>
     </Card>
   )

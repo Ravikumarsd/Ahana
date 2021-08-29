@@ -11,7 +11,7 @@ const TrainerSection = () => {
         title='OUR TRAINER YOGA'
         description='Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!'
       />
-      {/* <HorizontalSwiper /> */}
+      <HorizontalSwiper />
     </div>
   )
 }

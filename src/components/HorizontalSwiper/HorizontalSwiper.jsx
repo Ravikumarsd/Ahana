@@ -3,7 +3,7 @@ import './HorizontalSwiper.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper'
-import { Grid } from '@material-ui/core'
+import { Grid, useMediaQuery } from '@material-ui/core'
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css'
@@ -14,46 +14,35 @@ import { AboutSwiperCard } from '../AboutSwiperCard/AboutSwiperCard'
 // install Swiper modules
 SwiperCore.use([Autoplay, Pagination, Navigation])
 const HorizontalSwiper = () => {
+  const matches = useMediaQuery('(max-width:860px)')
   return (
-    <Swiper
-      spaceBetween={30}
-      // centeredSlides={true}
-      autoplay={{
-        delay: 3500,
-        disableOnInteraction: false
-      }}
-      // direction='vertical'
-      effect='fade'
-      pagination={{
-        clickable: true
-      }}
-      // navigation={true}
-      className='mySwiper'
-    >
-      <SwiperSlide>
-        <Grid>
-          <img
-            className='vs-img-one'
-            src='../img/hero-slider/first.png'
-            alt='first'
-          />
-        </Grid>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Grid>
-          <img
-            className='vs-img-two'
-            src='../img/hero-slider/second.png'
-            alt='second'
-          />
-        </Grid>
-      </SwiperSlide>
-      <Grid>
-        <SwiperSlide className='vs-img-three'>
-          <img className='' src='../img/hero-slider/third.png' alt='third' />
+    <div className='horizontal-swiper-about'>
+      <Swiper
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false
+        }}
+        effect='fade'
+        pagination={{
+          clickable: true
+        }}
+        slidesPerView={matches ? 1 : 2}
+        loop={true}
+        pagination={{
+          clickable: true
+        }}
+      >
+        <SwiperSlide>
+          <AboutSwiperCard image={'../img/trainer/1.png'} />
         </SwiperSlide>
-      </Grid>
-    </Swiper>
+        <SwiperSlide>
+          <AboutSwiperCard image={'../img/trainer/2.png'} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <AboutSwiperCard image={'../img/trainer/3.png'} />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   )
 }
 

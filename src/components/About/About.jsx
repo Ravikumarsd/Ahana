@@ -5,8 +5,9 @@ import { aboutSectionList } from '../../utils'
 import { makeStyles } from '@material-ui/core'
 import { Grid } from '@material-ui/core'
 import WWD from '../WWD/WWD'
-import TrainerSection from '../TrainerSection/TrainerSection';
+import TrainerSection from '../TrainerSection/TrainerSection'
 import ReviewSection from '../ReviewSection/ReviewSection'
+import CourseBenefit from '../CourseBenefit/CourseBenefit'
 
 const useStyles = makeStyles(theme => ({
   aboutSectionList: {
@@ -42,8 +43,9 @@ const About = () => {
         </Grid>
       </div>
       <WWD />
-      <TrainerSection/>
-      <ReviewSection/>
+      <TrainerSection />
+      <ReviewSection />
+      <CourseBenefit/>
     </div>
   )
 }

@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: ''
   }
 }))
-const SocialIcons = () => {
+const SocialIcons = ({ small }) => {
   const socialIcon = {
     borderRadius: '50%',
     color: '#333333',
@@ -19,13 +19,30 @@ const SocialIcons = () => {
     padding: '8px',
     margin: '5px'
   }
+  const socialIconSmall = {
+    color: '#666666',
+    padding: '8px',
+    margin: '5px'
+  }
   const classes = useStyles()
   return (
     <div className={classes.socialIcons}>
-      <FacebookIcon fontSize='large' style={socialIcon} />
-      <InstagramIcon fontSize='large' style={socialIcon} />
-      <LinkedInIcon fontSize='large' style={socialIcon} />
-      <TwitterIcon fontSize='large' style={socialIcon} />
+      <FacebookIcon
+        fontSize='large'
+        style={small ? socialIconSmall : socialIcon}
+      />
+      <InstagramIcon
+        fontSize='large'
+        style={small ? socialIconSmall : socialIcon}
+      />
+      <LinkedInIcon
+        fontSize='large'
+        style={small ? socialIconSmall : socialIcon}
+      />
+      <TwitterIcon
+        fontSize='large'
+        style={small ? socialIconSmall : socialIcon}
+      />
     </div>
   )
 }

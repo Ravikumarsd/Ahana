@@ -32,20 +32,20 @@ const ReviewSection = () => {
         pagination={{
           clickable: true
         }}
-        
+        slidesPerView={1}
         loop={true}
         pagination={{
           clickable: true
         }}
       >
         <SwiperSlide>
-          <ReviewSlider />
+          <ReviewSlider img={'../img/classes/author/1.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-          <ReviewSlider />
+          <ReviewSlider img={'../img/classes/author/2.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-          <ReviewSlider />
+          <ReviewSlider img={'../img/classes/author/3.jpg'} />
         </SwiperSlide>
       </Swiper>
     </div>

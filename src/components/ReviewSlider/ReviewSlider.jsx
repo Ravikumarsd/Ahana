@@ -11,14 +11,13 @@ const useStyles = makeStyles(theme => ({
     overflow: 'hidden'
   }
 }))
-const ReviewSlider = () => {
+const ReviewSlider = ({ img }) => {
   const classes = useStyles()
   return (
     <div style={{ color: 'white', marginBottom: '1rem' }}>
       <div className={classes.authorImage}>
-        <img src='../img/classes/author/1.jpg' alt='' />
+        <img style={{ height: 'inherit' }} src={img} alt='' />
       </div>
-
       <p>
         On the other hand, we denounce with righteous indignation and dislike
         men who are so beguiled and demoralized by the charms of pleasure of the
@@ -26,9 +25,7 @@ const ReviewSlider = () => {
         trouble that are bound to ensue; and equal blame belongs to those who
         fail in their duty through weakness.
       </p>
-
       <h4>Denise Thomas</h4>
-
       <h6 style={{ paddingBottom: '1rem' }}>Designer</h6>
     </div>
   )

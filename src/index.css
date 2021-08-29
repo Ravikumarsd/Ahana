@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Playfair+Display:400,400i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  background: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+.theme-background {
+  background: linear-gradient( 145deg, #f65d5d 0%, #fdb07d 100%);
+}
+
+.section-top {
+  height: 478px;
+  position: relative;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.section-top::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.92;
+  background: linear-gradient(145deg, #f65d5d 0%, #fdb07d 100%)
+}
+
+.page-top-section {
+  position: relative;
+  z-index: 9;
+  bottom: -50%;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}

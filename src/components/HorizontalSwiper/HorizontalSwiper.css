@@ -1,13 +1,13 @@
-.horizontal-swiper-about{
+.horizontal-swiper-trainer{
     
 }
 
-.horizontal-swiper-about .swiper {
+.horizontal-swiper-trainer .swiper {
     width: 100%;
     height: 100%;
 }
 
-.horizontal-swiper-about  .swiper-slide {
+.horizontal-swiper-trainer  .swiper-slide {
     /* text-align: center; */
     /* font-size: 18px;
     background: transparent;  */
@@ -29,20 +29,20 @@
     
 }
 
-/* .horizontal-swiper-about.swiper-slide img {
+/* .horizontal-swiper-trainer.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 } */
 
-/* .horizontal-swiper-about .swiper-container-vertical>.swiper-pagination-bullets {
+/* .horizontal-swiper-trainer .swiper-container-vertical>.swiper-pagination-bullets {
     right: 10px;
     top: 35%;
     transform: translate3d(0px, -50%, 0);
 } */
 
-/* .horizontal-swiper-about .swiper-container {
+/* .horizontal-swiper-trainer .swiper-container {
     height: 400px;
 } */
 

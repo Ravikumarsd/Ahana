@@ -4,7 +4,7 @@ import SectionTitle from '../SectionTitle/SectionTitle'
 
 const TrainerSection = () => {
   return (
-    <div>
+    <div style={{marginTop:'100px'}}>
       <SectionTitle
         textAlign='center'
         logo='../img/icons/logoicon.png'

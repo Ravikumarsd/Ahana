@@ -1,21 +1,28 @@
+import { makeStyles } from '@material-ui/core'
 import React from 'react'
-import './HorizontalSwiper.css'
-
+import ReviewSlider from '../ReviewSlider/ReviewSlider'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper'
 import { Grid, useMediaQuery } from '@material-ui/core'
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css'
-import { AboutSwiperCard } from '../AboutSwiperCard/AboutSwiperCard'
 
+const useStyles = makeStyles(theme => ({
+  reviewSection: {}
+}))
 
-// install Swiper modules
-SwiperCore.use([Autoplay, Pagination, Navigation])
-const HorizontalSwiper = () => {
-  const matches = useMediaQuery('(max-width:860px)')
+const ReviewSection = () => {
+  const classes = useStyles()
   return (
-    <div className='horizontal-swiper-trainer'>
+    <div
+      style={{
+        backgroundImage: `url(../img/review-bg.jpg)`,
+        paddingTop: '110px',
+        paddingBottom: '105px'
+      }}
+      className='section-top horizontal-swiper-review'
+    >
       <Swiper
         autoplay={{
           delay: 3500,
@@ -25,24 +32,24 @@ const HorizontalSwiper = () => {
         pagination={{
           clickable: true
         }}
-        slidesPerView={matches ? 1 : 2}
+        
         loop={true}
         pagination={{
           clickable: true
         }}
       >
         <SwiperSlide>
-          <AboutSwiperCard image={'../img/trainer/1.png'} />
+          <ReviewSlider />
         </SwiperSlide>
         <SwiperSlide>
-          <AboutSwiperCard image={'../img/trainer/2.png'} />
+          <ReviewSlider />
         </SwiperSlide>
         <SwiperSlide>
-          <AboutSwiperCard image={'../img/trainer/3.png'} />
+          <ReviewSlider />
         </SwiperSlide>
       </Swiper>
     </div>
   )
 }
 
-export default HorizontalSwiper
+export default ReviewSection

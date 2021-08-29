@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core'
 import { Grid } from '@material-ui/core'
 import WWD from '../WWD/WWD'
 import TrainerSection from '../TrainerSection/TrainerSection';
+import ReviewSection from '../ReviewSection/ReviewSection'
 
 const useStyles = makeStyles(theme => ({
   aboutSectionList: {
@@ -42,6 +43,7 @@ const About = () => {
       </div>
       <WWD />
       <TrainerSection/>
+      <ReviewSection/>
     </div>
   )
 }

@@ -41,7 +41,7 @@ const Navbar = ({ activeHome }) => {
     ))
   }
   return (
-    <div item className={`${classes.listStyleType} navbar`}>
+    <div item className={`${classes.listStyleType}`}>
       {renderNavLinkList()}
     </div>
   )

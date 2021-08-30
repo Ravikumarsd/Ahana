@@ -1,6 +1,6 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
-import CourseBenefitCard from '../CourseBenefitCard/CourseBenefitCard'
+import BlogCard from '../BlogCard/BlogCard'
 import SectionTitle from '../SectionTitle/SectionTitle'
 
 const CourseBenefit = () => {
@@ -14,9 +14,9 @@ const CourseBenefit = () => {
       />
       <div style={{margin:'4rem'}}>
         <Grid container spacing={1} >
-          <CourseBenefitCard img={'../img/blog/1.jpg'} />
-          <CourseBenefitCard img={'../img/blog/2.jpg'} />
-          <CourseBenefitCard img={'../img/blog/3.jpg'} />
+          <BlogCard img={'../img/blog/1.jpg'} />
+          <BlogCard img={'../img/blog/2.jpg'} />
+          <BlogCard img={'../img/blog/3.jpg'} />
         </Grid>
       </div>
     </div>

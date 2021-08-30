@@ -7,21 +7,31 @@ import SocialIcons from '../SocialIcons/SocialIcons'
 const useStyles = makeStyles({
   root: {
     maxWidth: 360,
-    margin:0,
-    padding:0
+    marginBottom: '1rem',
+    padding: 0
+    
   },
   media: {
     height: 300
-    
+  },
+  heading: {
+    fontFamily: 'Playfair Display, serif',
+    fontWeight: '400',
+    margin: '15px 0',
+    fontSize: '20px'
+  },
+  text: {
+    fontSize: '14px',
+    color: '#666666',
+    margin: '15px 0'
   },
   footer: {
     display: 'flex',
     justifyContent: 'space-around'
   }
- 
 })
 
-export default function CourseBenefitCard ({img}) {
+export default function BlogCard ({ img }) {
   const classes = useStyles()
 
   return (
@@ -33,14 +43,14 @@ export default function CourseBenefitCard ({img}) {
           title='Contemplative Reptile'
         />
         <div style={{ textAlign: 'center', padding: '0 1rem' }}>
-          <h2 component='h2'>The Perfect Dose</h2>
-          <p>
+          <div className={classes.heading}>The Perfect Dose</div>
+          <div className={classes.text}>
             To take a trivial example, which of us ever undertakes laborious
             physical exercise, except to obtain
-          </p>
+          </div>
         </div>
         <div className={classes.footer}>
-          <div style={{ padding: '12px 0 0 12px' }}>Health & Beauty</div>
+          <div className={classes.text}>Health & Beauty</div>
           <div>
             <SocialIcons small={true} />
           </div>

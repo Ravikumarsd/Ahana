@@ -1,7 +1,56 @@
+import { Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
+import EventsCard from '../EventsCard/EventsCard'
 import SectionTitle from '../SectionTitle/SectionTitle'
 
+const renderEventsCard = classes => {
+  return (
+    <Grid container spacing={2}>
+      <Grid sx={12} md={6}>
+        <div className={classes.eventsCard}>
+          <EventsCard image='../img/event/1.jpg' />
+        </div>
+        <div className={classes.eventsCard}>
+          <EventsCard image='../img/event/2.jpg' />
+        </div>
+        <div className={classes.eventsCard}>
+          <EventsCard image='../img/event/3.jpg' />
+        </div>
+        <div className={classes.eventsCard}>
+          <EventsCard image='../img/event/4.jpg' />
+        </div>
+      </Grid>
+      <Grid sx={12} md={6}>
+        <div className={classes.eventsCard}>
+          <EventsCard image='../img/event/5.jpg' />
+        </div>
+        <div className={classes.eventsCard}>
+          <EventsCard image='../img/event/6.jpg' />
+        </div>
+        <div className={classes.eventsCard}>
+          <EventsCard image='../img/event/7.jpg' />
+        </div>
+        <div className={classes.eventsCard}>
+          <EventsCard image='../img/event/8.jpg' />
+        </div>
+      </Grid>
+    </Grid>
+  )
+}
+const useStyles = makeStyles(theme => ({
+  cardsContainer: {
+    marginLeft: '8rem',
+    marginRight: '4rem',
+    marginTop: '100px',
+    marginBottom: '100px'
+  },
+  eventsCard: {
+    margin: '1rem'
+    
+  }
+}))
 const Events = () => {
+  const classes = useStyles()
   return (
     <div>
       <div
@@ -16,6 +65,7 @@ const Events = () => {
           />
         </div>
       </div>
+      <div className={classes.cardsContainer}>{renderEventsCard(classes)}</div>
     </div>
   )
 }

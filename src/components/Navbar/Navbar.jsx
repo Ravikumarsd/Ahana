@@ -1,8 +1,9 @@
-import { makeStyles } from '@material-ui/core'
+import { makeStyles,useMediaQuery } from '@material-ui/core'
 import React from 'react'
 import './Navbar.css'
 import navBarInfo from './navBarInfo'
 import NavLink from '../NavLink/NavLink'
+
 
 const useStyles = makeStyles(theme => ({
   listStyleType: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 //840px height for  home
 
 const Navbar = ({ activeHome }) => {
-    console.log("activeHome==>")
+  console.log('activeHome==>')
   const [active, setActive] = React.useState('')
   const setNavActive = event => {
     const id = event.target.id
@@ -40,9 +41,10 @@ const Navbar = ({ activeHome }) => {
       />
     ))
   }
+  const matches = useMediaQuery('(max-width:600px)')
   return (
-    <div item className={`${classes.listStyleType}`}>
-      {renderNavLinkList()}
+    <div item className={`${classes.listStyleType} navbar`}>
+      {matches ? null : renderNavLinkList()}
     </div>
   )
 }

@@ -12,8 +12,9 @@ const useStyles = makeStyles({
   },
   videoLink: {
     '& img': {
-      marginTop: '30%',
-      marginLeft: '30%'
+      margin: '0 auto',
+      padding: '4rem',
+      position: 'relative'
     }
   }
 })

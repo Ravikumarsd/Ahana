@@ -7,7 +7,7 @@ import { Grid, useMediaQuery } from '@material-ui/core'
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css'
-import { AboutSwiperCard } from '../AboutSwiperCard/AboutSwiperCard'
+import { TrainingCard } from '../TrainingCard/TrainingCard'
 
 
 // install Swiper modules
@@ -33,13 +33,13 @@ const HorizontalSwiper = () => {
         className='horizontal-swiper-trainer'
       >
         <SwiperSlide>
-          <AboutSwiperCard image={'../img/trainer/1.png'} />
+          <TrainingCard image={'../img/trainer/1.png'} />
         </SwiperSlide>
         <SwiperSlide>
-          <AboutSwiperCard image={'../img/trainer/2.png'} />
+          <TrainingCard image={'../img/trainer/2.png'} />
         </SwiperSlide>
         <SwiperSlide>
-          <AboutSwiperCard image={'../img/trainer/3.png'} />
+          <TrainingCard image={'../img/trainer/3.png'} />
         </SwiperSlide>
       </Swiper>
     </div>

@@ -5,7 +5,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     overflow: 'visible',
-    height:"275px"
+    height:"275px",
+    
   },
   column: {
     display: 'flex',
@@ -44,7 +45,7 @@ const useStyles = makeStyles(theme => ({
     top: '-25px'
   }
 }))
-export const AboutSwiperCard = ({image}) => {
+export const TrainingCard = ({image}) => {
   const classes = useStyles()
   const matches = useMediaQuery('(min-width:960px)')
   const match800 = useMediaQuery('(min-width:800px)') //row

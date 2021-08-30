@@ -1,7 +1,8 @@
-import { Grid, makeStyles } from '@material-ui/core'
+import { Grid, makeStyles,useMediaQuery } from '@material-ui/core'
 import React from 'react'
 import EventsCard from '../EventsCard/EventsCard'
 import SectionTitle from '../SectionTitle/SectionTitle'
+
 
 const renderEventsCard = classes => {
   return (
@@ -46,11 +47,16 @@ const useStyles = makeStyles(theme => ({
   },
   eventsCard: {
     margin: '1rem'
-    
+  },
+  cardsContainer500:{
+    justifyContent:'center',
+    marginTop: '100px',
+    marginBottom: '100px'
   }
 }))
 const Events = () => {
   const classes = useStyles()
+  const matches = useMediaQuery('(max-width:500px)')
   return (
     <div>
       <div
@@ -65,7 +71,7 @@ const Events = () => {
           />
         </div>
       </div>
-      <div className={classes.cardsContainer}>{renderEventsCard(classes)}</div>
+      <div className={matches?classes.cardsContainer500:classes.cardsContainer}>{renderEventsCard(classes)}</div>
     </div>
   )
 }

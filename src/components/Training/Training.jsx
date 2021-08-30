@@ -5,7 +5,7 @@ import { TrainingCard } from '../TrainingCard/TrainingCard'
 const useStyles = makeStyles(theme => ({
   trainingCard: {
     maxWidth: '75%',
-    margin: theme.spacing(6)
+    margin: '48px'
   }
 }))
 const renderTrainingCards = classes => {

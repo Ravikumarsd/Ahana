@@ -1,0 +1,31 @@
+.footer div a:hover {
+    color: #f65d5d;
+}
+
+.footer div a {
+    color: #666666;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.footer .logo {
+    max-width: 120px;
+    padding: 0 0 0 0.8rem;
+}
+
+.footer .logo-text {
+    color: #666666;
+    max-width: 230px;
+    font-size: 12px;
+    padding: 1rem 0 1rem 0.8rem;
+}
+
+.footer {
+    /* margin: 0 15rem; */
+    margin-left: 6rem;
+    /* min-height: 300px; */
+}
+
+.footer-bottom {
+    margin: 40px 0 10px 0;
+}

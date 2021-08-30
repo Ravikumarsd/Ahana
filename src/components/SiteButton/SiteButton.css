@@ -1,21 +1,18 @@
 .site-btn {
-    
-    color: #fff;
+    color: #fff !important;
     padding: 13px 29px;
     position: relative;
     transition: all 0.4s;
     z-index: 1;
-    background: linear-gradient(145deg, #fdb07d 0%, #f65d5d 100%);
-    border: 2px solid linear-gradient(145deg, #fdb07d 0%, #f65d5d 100%);
-    
-    
+    background: linear-gradient(145deg, #fdb07d 0%, #f65d5d 100%) !important;
+    border: 2px solid linear-gradient(145deg, #fdb07d 0%, #f65d5d 100%) !important;
+    border-radius: 50px !important;
 }
 
 .site-btn:hover {
-    background: #fff;
-    border: 2px solid linear-gradient(145deg, #fdb07d 0%, #f65d5d 100%);
-
-    color: #f65d5d;
+    background: #fff !important;
+    border: 2px solid linear-gradient(145deg, #fdb07d 0%, #f65d5d 100%) !important;
+    color: #f65d5d !important;
 }
 
 .site-btn.sb-white {}

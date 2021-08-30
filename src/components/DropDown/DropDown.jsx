@@ -7,7 +7,7 @@ import MenuList from '@material-ui/core/MenuList'
 import { makeStyles } from '@material-ui/core/styles'
 import IconTextBox from '../IconTextBox/IconTextBox'
 import { ExpandMore } from '@material-ui/icons'
-import LanguageItem from '../LanguageItem/LanguageItem'
+import LanguageItem from '../DropDownItem/DropDownItem'
 import languageInfo from './LanguageInfo'
 
 const useStyles = makeStyles(theme => ({
@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex'
   }
 }))
-const LanguageSelection = () => {
+const DropDown = () => {
   const classes = useStyles()
   const [open, setOpen] = React.useState(false)
   const [language, setLanguage] = React.useState('Language')
@@ -94,4 +94,4 @@ const LanguageSelection = () => {
   )
 }
 
-export default LanguageSelection
+export default DropDown

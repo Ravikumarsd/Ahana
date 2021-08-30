@@ -11,7 +11,7 @@
     /* text-align: center; */
     /* font-size: 18px;
     background: transparent;  */
-    min-height: 600px;
+    /* min-height: 600px; */
     /* Center slide text vertically */
     /* display: flex; */
     display: -webkit-box;
@@ -42,10 +42,11 @@
     transform: translate3d(0px, -50%, 0);
 } */
 
-/* .horizontal-swiper-trainer .swiper-container {
-    height: 400px;
-} */
+.horizontal-swiper-trainer .swiper-container {
+    height: 600px;
+}
 
+ 
 /* .vs-item {
     height: 100%;
     padding: 0 50px;

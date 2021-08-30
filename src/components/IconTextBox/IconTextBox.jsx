@@ -7,7 +7,9 @@ const useStyles = makeStyles(theme => ({
   iconTextbox: {
     display: 'flex',
     alignItems: 'center',
-    margin: '0 6px'
+    margin: '0 6px',
+    fontSize:'12px',
+    color:'#666666'
   },
   iconTextboxIcon: {
     padding: '3px 8px 0 0'

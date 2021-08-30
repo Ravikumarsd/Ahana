@@ -8,10 +8,11 @@ import Events from './components/Events/Events'
 import Blog from './components/Blog/Blog'
 import Contact from './components/Contact/Contact'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App () {
   return (
-    <div className="app">
+    <div className='app'>
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
@@ -22,6 +23,7 @@ function App () {
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/contact' component={Contact} />
       </Switch>
+      <Footer />
     </div>
   )
 }

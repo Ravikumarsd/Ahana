@@ -1,0 +1,17 @@
+#text-field {
+    min-width: 180px;
+    padding-left:1rem;
+    border-radius: 41px;
+    border: 1px solid #e6e6e6;
+    background: #fafafa;
+    font-size: 14px;
+    color: #999999;
+}
+
+/* #text-field:before,#text-field:after {
+    display: none;
+} */
+
+.MuiInput-underline:before, .MuiInput-underline:after {
+    display: none;
+}

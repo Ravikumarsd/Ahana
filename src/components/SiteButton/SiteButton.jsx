@@ -6,15 +6,13 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   siteButtonDiv: {
     display: 'flex',
-    marginTop:'60px',
-    borderRadius:"50px"
   }
 }))
-const SiteButton = () => {
+const SiteButton = ({text}) => {
   const classes = useStyles()
   return (
     <div className={classes.siteButtonDiv}>
-      <Button className='site-btn'>Overrides CSS</Button>
+      <Button className='site-btn'>{text}</Button>
     </div>
   )
 }

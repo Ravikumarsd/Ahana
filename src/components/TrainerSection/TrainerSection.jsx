@@ -4,14 +4,16 @@ import SectionTitle from '../SectionTitle/SectionTitle'
 
 const TrainerSection = () => {
   return (
-    <div style={{marginTop:'100px'}}>
+    <div style={{ marginTop: '100px' }}>
       <SectionTitle
         textAlign='center'
         logo='../img/icons/logoicon.png'
         title='OUR TRAINER YOGA'
         description='Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!'
       />
-      <HorizontalSwiper />
+      <div>
+        <HorizontalSwiper />
+      </div>
     </div>
   )
 }

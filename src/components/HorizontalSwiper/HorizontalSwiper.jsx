@@ -22,14 +22,15 @@ const HorizontalSwiper = () => {
           disableOnInteraction: false
         }}
         effect='fade'
-        pagination={{
-          clickable: true
-        }}
+        // pagination={{
+        //   clickable: true
+        // }}
         slidesPerView={matches ? 1 : 2}
         loop={true}
-        pagination={{
-          clickable: true
-        }}
+        // pagination={{
+        //   clickable: true
+        // }}
+        className='horizontal-swiper-trainer'
       >
         <SwiperSlide>
           <AboutSwiperCard image={'../img/trainer/1.png'} />

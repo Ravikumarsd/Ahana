@@ -19,7 +19,8 @@ const ReviewSection = () => {
       style={{
         backgroundImage: `url(../img/review-bg.jpg)`,
         paddingTop: '110px',
-        paddingBottom: '105px'
+        paddingBottom: '105px',
+        marginTop:"110px"
       }}
       className='section-top horizontal-swiper-review'
     >

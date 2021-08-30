@@ -4,7 +4,7 @@ import IconTextBox from '../IconTextBox/IconTextBox'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import './HeaderTop.css'
-import LanguageSelection from '../LanguageSelection/LanguageSelection'
+import DropDown from '../DropDown/DropDown'
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -35,7 +35,7 @@ const HeaderTop = () => {
       </Grid>
       <Grid container className={classes.headerTopRight}>
         <IconTextBox icon='alarmon' text='Mon - Fri: 6:30am - 07:45pm' />
-        <LanguageSelection />
+        <DropDown />
       </Grid>
     </Paper>
   )

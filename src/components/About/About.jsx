@@ -8,6 +8,7 @@ import WWD from '../WWD/WWD'
 import TrainerSection from '../TrainerSection/TrainerSection'
 import ReviewSection from '../ReviewSection/ReviewSection'
 import CourseBenefit from '../CourseBenefit/CourseBenefit'
+import GallerySection from '../GallerySection/GallerySection'
 
 const useStyles = makeStyles(theme => ({
   aboutSectionList: {
@@ -46,6 +47,8 @@ const About = () => {
       <TrainerSection />
       <ReviewSection />
       <CourseBenefit/>
+      <GallerySection/>
+      
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { MenuItem } from '@material-ui/core'
 
-const LanguageItem = ({id, handleClose }) => {
+const DropDownItem = ({id, handleClose }) => {
   return (
     <MenuItem data-my-value={id} onClick={handleClose}>
       {id}
@@ -9,4 +9,4 @@ const LanguageItem = ({id, handleClose }) => {
   )
 }
 
-export default LanguageItem
+export default DropDownItem

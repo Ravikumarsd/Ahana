@@ -2,16 +2,17 @@ import React from 'react'
 import { Card, CardMedia, Grid, makeStyles } from '@material-ui/core'
 import IconTextBox from '../IconTextBox/IconTextBox'
 import SiteButton from '../SiteButton/SiteButton'
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 400,
-    margin:"2rem 0"
+    maxWidth: 320,
+    margin: '2rem 0'
   },
   media: {
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: '2rem',
+    paddingTop: theme.spacing(2),
     '& img': {
+      maxHeight: '240px',
       borderRadius: '50%'
     }
   },
@@ -38,20 +39,20 @@ const useStyles = makeStyles({
     justifyContent: 'space-between'
 
     // imageContainer: {},
-    
+
     // button: {}
   },
   cardBottomImageText: {
     display: 'flex',
     justifyContent: 'space-between',
-    '& img':{
-        width:"40px",
-        height:"40px",
-        borderRadius:"50%"
+    '& img': {
+      width: '40px',
+      height: '40px',
+      borderRadius: '50%'
     }
   },
   textContainer: {
-     marginTop: '6px'  
+    marginTop: '6px'
   },
   name: {
     fontWeight: '400',
@@ -65,18 +66,17 @@ const useStyles = makeStyles({
     color: '#f65d5d',
     // marginBottom: '20px',
     fontSize: '10px',
-    fontWeight: '600',
+    fontWeight: '600'
     // margin: '0'
   },
-  button:{
-      display:'flex',
-      justifyContent:'center'
+  button: {
+    display: 'flex',
+    justifyContent: 'center'
   },
-  cardBottomContainer:{
-    padding:"0.5rem 1rem"
-    
+  cardBottomContainer: {
+    padding: '0.5rem 1rem'
   }
-})
+}))
 const ClassesCard = () => {
   const classes = useStyles()
   return (
@@ -103,12 +103,12 @@ const ClassesCard = () => {
         </div>
       </div>
       <div className={classes.cardBottomContainer}>
-        <Grid container spacing={1} >
+        <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
             <div className={classes.cardBottom}>
               <div className={classes.cardBottomImageText}>
                 <div className={classes.imageContainer}>
-                  <img  src='../img/classes/author/1.jpg' alt='' />
+                  <img src='../img/classes/author/1.jpg' alt='' />
                 </div>
                 <div className={classes.textContainer}>
                   <div className={classes.name}>Victoria Webb</div>

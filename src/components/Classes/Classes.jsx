@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 const renderClassesCards = () => {
   return (
     <Grid item xs={12} sm={8} >
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <ClassesCard />
           <ClassesCard />

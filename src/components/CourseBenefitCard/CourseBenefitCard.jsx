@@ -18,14 +18,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-around'
   }
-  //   position: absolute;
-  //     content: "";
-  //     width: 5px;
-  //     height: 5px;
-  //     left: 0;
-  //     top: calc( 50% - 2px);
-  //     border-radius: 20px;
-  //     background: #f65d5d;
+ 
 })
 
 export default function CourseBenefitCard ({img}) {

@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   siteButtonDiv: {
     display: 'flex',
+    // minWidth:"80px",
+    height:"fit-content"
   }
 }))
 const SiteButton = ({text}) => {

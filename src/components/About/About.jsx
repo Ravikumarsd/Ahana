@@ -46,9 +46,7 @@ const About = () => {
       <WWD />
       <TrainerSection />
       <ReviewSection />
-      <CourseBenefit/>
-      <GallerySection/>
-      
+      <CourseBenefit />
     </div>
   )
 }

@@ -9,6 +9,7 @@ import Blog from './components/Blog/Blog'
 import Contact from './components/Contact/Contact'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import GallerySection from './components/GallerySection/GallerySection'
 
 function App () {
   return (
@@ -23,6 +24,7 @@ function App () {
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/contact' component={Contact} />
       </Switch>
+      <GallerySection />
       <Footer />
     </div>
   )

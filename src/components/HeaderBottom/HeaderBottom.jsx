@@ -49,16 +49,18 @@ const HeaderBottom = () => {
       history.push(info.to)
     }
   }
-  const matches = useMediaQuery('(max-width:600px)')
+  
+  
+  const matches620 = useMediaQuery('(max-width:620px)')
+  const matches800 = useMediaQuery('(max-width:800px)')
   return (
     <Paper className={`${classes.headerBottom}`}>
       <BrandLogo onBrandLogoClick={onBrandLogoClick} />
       <Navbar active={active} />
       {active}
       <div item className={classes.headerBottomRight}>
-        {matches ? (
+        {!matches620 && matches800 ? (
           <DropDown
-            // poperStyle={}
             data={navBarInfo}
             getDropDownValue={getDropDownValue}
           >

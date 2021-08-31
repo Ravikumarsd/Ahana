@@ -42,7 +42,7 @@ const Navbar = ({ activeHome }) => {
     ))
   }
   
-  const matches = useMediaQuery('(max-width:600px)')
+  const matches = useMediaQuery('(max-width:800px)')
   return (
     <div item className={`${classes.listStyleType} navbar`}>
       {matches ? null : renderNavLinkList()}

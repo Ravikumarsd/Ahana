@@ -44,7 +44,10 @@ const HeaderBottom = () => {
     console.log('brand logo clicked', active)
   }
   const getDropDownValue = info => {
-    history.push(info.to)
+    console.log(info)
+    if (info && info.to) {
+      history.push(info.to)
+    }
   }
   const matches = useMediaQuery('(max-width:600px)')
   return (
@@ -54,7 +57,11 @@ const HeaderBottom = () => {
       {active}
       <div item className={classes.headerBottomRight}>
         {matches ? (
-          <DropDown data={navBarInfo} getDropDownValue={getDropDownValue}>
+          <DropDown
+            // poperStyle={}
+            data={navBarInfo}
+            getDropDownValue={getDropDownValue}
+          >
             <Menu />
           </DropDown>
         ) : null}

@@ -50,7 +50,9 @@ const DropDown = props => {
       ))}
     </MenuList>
   )
+  // const useStyles = makeStyles(theme=>(
 
+  // ))
   return (
     <div>
       <div
@@ -68,6 +70,10 @@ const DropDown = props => {
         role={undefined}
         transition
         disablePortal
+        style={{
+        
+          width: '100%'
+        }}
       >
         {({ TransitionProps, placement }) => (
           <Grow
@@ -77,7 +83,12 @@ const DropDown = props => {
                 placement === 'bottom' ? 'center top' : 'center bottom'
             }}
           >
-            <Paper>
+            <Paper
+             style={{
+              backgroundColor: 'black',
+              color:'white'
+            }}
+            >
               <ClickAwayListener onClickAway={handleClose}>
                 {renderMenuList(props)}
               </ClickAwayListener>

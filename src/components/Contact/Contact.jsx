@@ -91,6 +91,7 @@ const Contact = () => {
                 className={classes.margin}
                 id='first-name'
                 placeholder='First Name'
+                value={firstName}
                 onChange={e => {
                   setFirstName(e.target.value)
                 }}
@@ -101,6 +102,7 @@ const Contact = () => {
                 className={classes.margin}
                 id='second-name'
                 placeholder='Second Name'
+                value={secondName}
                 onChange={e => {
                   setSecondName(e.target.value)
                 }}
@@ -113,6 +115,7 @@ const Contact = () => {
                 className={classes.margin}
                 id='email'
                 placeholder='Email'
+                value={email}
                 onChange={e => {
                   setEmail(e.target.value)
                 }}
@@ -123,6 +126,7 @@ const Contact = () => {
                 className={classes.margin}
                 id='phone'
                 placeholder='Phone'
+                value={phone}
                 onChange={e => {
                   setPhone(e.target.value)
                 }}
@@ -135,6 +139,7 @@ const Contact = () => {
               aria-label='minimum height'
               minRows={8}
               placeholder='Message'
+              value={message}
               onChange={e => {
                 setMessage(e.target.value)
               }}
@@ -149,6 +154,11 @@ const Contact = () => {
     alert(
       `firstName: ${firstName},secondName: ${secondName}, email: ${email}, phone:${phone}, message:${message}`
     )
+    setFirstName('')
+    setSecondName('')
+    setEmail('')
+    setPhone('')
+    setMessage('')
   }
   const [firstName, setFirstName] = React.useState('')
   const [secondName, setSecondName] = React.useState('')

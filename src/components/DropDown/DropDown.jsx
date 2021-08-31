@@ -71,8 +71,7 @@ const DropDown = props => {
         transition
         disablePortal
         style={{
-        
-          width: '100%'
+          // width: '100%'
         }}
       >
         {({ TransitionProps, placement }) => (
@@ -85,8 +84,8 @@ const DropDown = props => {
           >
             <Paper
              style={{
-              backgroundColor: 'black',
-              color:'white'
+              // backgroundColor: 'black',
+              // color:'white'
             }}
             >
               <ClickAwayListener onClickAway={handleClose}>

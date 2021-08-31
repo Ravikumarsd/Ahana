@@ -4,8 +4,6 @@ import SectionTitle from '../SectionTitle/SectionTitle'
 import { Grid, makeStyles } from '@material-ui/core'
 import ClassesFilter from '../ClassesFilter/ClassesFilter'
 
-
-
 const useStyles = makeStyles(theme => ({
   classesSection: {
     margin: '5rem 0 5rem 10rem'
@@ -14,7 +12,7 @@ const useStyles = makeStyles(theme => ({
 
 const renderClassesCards = () => {
   return (
-    <Grid item xs={12} sm={8} >
+    <Grid item xs={12} sm={8}>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <ClassesCard />
@@ -36,7 +34,7 @@ const renderClassesSection = () => {
   return (
     <Grid container spacing={1}>
       {renderClassesCards()}
-      <ClassesFilter/>
+      <ClassesFilter />
     </Grid>
   )
 }

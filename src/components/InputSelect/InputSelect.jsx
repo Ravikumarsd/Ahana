@@ -1,19 +1,10 @@
 import { MenuItem, TextField } from '@material-ui/core'
 import React from 'react'
-import "./InputSelect.css"
-const InputSelect = ({ data, placeholder }) => {
-  const [value, setValue] = React.useState('')
-  const handleChange = event => {
-    setValue(event.target.value)
-  }
+import './InputSelect.css'
+const InputSelect = ({ data, label, onChange }) => {
   return (
     <div>
-      <TextField
-        id='text-field'
-        select
-        value={value}
-        onChange={handleChange}
-      >
+      <TextField id='text-field' select helperText={label} onChange={onChange}>
         {data &&
           data.map(option => (
             <MenuItem key={option} value={option}>

@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 //840px height for  home
 
 const Navbar = ({ activeHome }) => {
-  console.log('activeHome==>')
+  
   const [active, setActive] = React.useState('')
   const setNavActive = event => {
     const id = event.target.id
@@ -26,6 +26,7 @@ const Navbar = ({ activeHome }) => {
   }
   //todo: optimise the rerendering due to styling applied to nav buttons
   const classes = useStyles()
+  
   const renderNavLinkList = () => {
     if (activeHome) {
       navBarInfo = navBarInfo.filter(info => info.id === 'home')

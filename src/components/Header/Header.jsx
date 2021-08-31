@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     zIndex: '99'
   }
 }))
-const Header = () => {
+const Header = ({}) => {
   const classes = useStyles()
   return (
     <div className={classes.header}>

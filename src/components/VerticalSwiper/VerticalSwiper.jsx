@@ -17,8 +17,8 @@ export default function VerticalSwiper () {
   return (
     <div className="vertical-swiper-home">
       <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
+        // spaceBetween={30}
+        // centeredSlides={true}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false
@@ -28,7 +28,8 @@ export default function VerticalSwiper () {
         pagination={{
           clickable: true
         }}
-        // navigation={true}
+        noSwiping={true}
+        noSwipingClass="mySwiper"
         className='mySwiper'
       >
         <SwiperSlide>

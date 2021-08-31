@@ -44,7 +44,7 @@ const HeaderBottom = () => {
     console.log('brand logo clicked', active)
   }
   const getDropDownValue = info => {
-    console.log(info)
+    // console.log(info)
     if (info && info.to) {
       history.push(info.to)
     }

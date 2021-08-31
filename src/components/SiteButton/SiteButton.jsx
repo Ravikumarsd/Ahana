@@ -10,11 +10,11 @@ const useStyles = makeStyles(theme => ({
     height:"fit-content"
   }
 }))
-const SiteButton = ({text}) => {
+const SiteButton = ({text,onClick}) => {
   const classes = useStyles()
   return (
     <div className={classes.siteButtonDiv}>
-      <Button className='site-btn'>{text}</Button>
+      <Button onClick ={onClick} className='site-btn'>{text}</Button>
     </div>
   )
 }

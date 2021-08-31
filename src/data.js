@@ -1,3 +1,10 @@
+export const languageInfo = [
+  { label: 'EN', id: 'EN' },
+  { label: 'ES', id: 'ES' },
+  { label: 'JA', id: 'JA' },
+  { label: 'AR', id: 'AR' }
+]
+
 export const aboutInfo = [
   {
     id: 1,
@@ -25,7 +32,7 @@ export const aboutInfo = [
   }
 ]
 
-export const sort = ["Default Sorting", "Oldest","Newest"]
+export const sort = ['Default Sorting', 'Oldest', 'Newest']
 export const filter = {
   filterByCategory: ['Category1', 'Category2', 'Category3'],
   filterByLevel: ['Level1', 'Level2', 'Level3'],

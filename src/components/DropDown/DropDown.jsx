@@ -7,18 +7,13 @@ import MenuList from '@material-ui/core/MenuList'
 import { makeStyles } from '@material-ui/core/styles'
 import IconTextBox from '../IconTextBox/IconTextBox'
 import { ExpandMore } from '@material-ui/icons'
-import LanguageItem from '../DropDownItem/DropDownItem'
-import languageInfo from './LanguageInfo'
+import DropDownItem from '../DropDownItem/DropDownItem'
 
-const useStyles = makeStyles(theme => ({
-  languageButton: {
-    display: 'flex'
-  }
-}))
-const DropDown = () => {
+const useStyles = makeStyles(theme => ({}))
+const DropDown = props => {
   const classes = useStyles()
   const [open, setOpen] = React.useState(false)
-  const [language, setLanguage] = React.useState('Language')
+  const [value, seValue] = React.useState('select')
   const anchorRef = React.useRef(null)
 
   const handleToggle = () => {
@@ -38,18 +33,20 @@ const DropDown = () => {
     const { myValue } =
       event && event.currentTarget && event.currentTarget.dataset
         ? event.currentTarget.dataset
-        : { myValue: language }
-    setLanguage(myValue)
-    console.log('selected language ==>>', myValue)
+        : { myValue: value }
+    seValue(myValue)
+    const selectedInfo = props.data.find(val => val.id == myValue)
+    // console.log(selectedInfo)
+    props && props.getDropDownValue && props.getDropDownValue(selectedInfo)
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return
     }
     setOpen(false)
   }
-  const renderMenuList = () => (
+  const renderMenuList = props => (
     <MenuList autoFocusItem={open} id='menu-list-grow'>
-      {languageInfo.map(language => (
-        <LanguageItem id={language} handleClose={handleClose} />
+      {props.data.map(({ label }) => (
+        <DropDownItem key={label} id={label} handleClose={handleClose} />
       ))}
     </MenuList>
   )
@@ -57,14 +54,12 @@ const DropDown = () => {
   return (
     <div>
       <div
-        className={classes.languageButton}
         ref={anchorRef}
         aria-controls={open ? 'menu-list-grow' : undefined}
         aria-haspopup='true'
         onClick={handleToggle}
       >
-        <IconTextBox icon='language' text='Language' languageDropdown />
-        <ExpandMore />
+        {props.children}
       </div>
 
       <Popper
@@ -84,7 +79,7 @@ const DropDown = () => {
           >
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
-                {renderMenuList()}
+                {renderMenuList(props)}
               </ClickAwayListener>
             </Paper>
           </Grow>

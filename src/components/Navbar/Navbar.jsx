@@ -1,9 +1,9 @@
-import { makeStyles,useMediaQuery } from '@material-ui/core'
+import { makeStyles, useMediaQuery } from '@material-ui/core'
 import React from 'react'
 import './Navbar.css'
 import navBarInfo from './navBarInfo'
 import NavLink from '../NavLink/NavLink'
-
+import { Menu, MenuBook } from '@material-ui/icons'
 
 const useStyles = makeStyles(theme => ({
   listStyleType: {
@@ -41,6 +41,7 @@ const Navbar = ({ activeHome }) => {
       />
     ))
   }
+  
   const matches = useMediaQuery('(max-width:600px)')
   return (
     <div item className={`${classes.listStyleType} navbar`}>

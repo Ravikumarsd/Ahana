@@ -1,9 +1,14 @@
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, useMediaQuery } from '@material-ui/core'
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import BrandLogo from '../BrandLogo/BrandLogo'
-import { Search, Sort } from '@material-ui/icons'
+import { Search, Sort, Menu, ExpandMore } from '@material-ui/icons'
 import { Paper } from '@material-ui/core'
+import DropDown from '../DropDown/DropDown'
+import IconTextBox from '../IconTextBox/IconTextBox'
+import { languageInfo } from '../../data'
+import navBarInfo from '../Navbar/navBarInfo'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   headerBottom: {
@@ -30,18 +35,30 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const HeaderBottom = () => {
+  let history = useHistory()
+
   const classes = useStyles()
   const [active, setActive] = React.useState(false)
   const onBrandLogoClick = () => {
     setActive(true)
     console.log('brand logo clicked', active)
   }
+  const getDropDownValue = info => {
+    history.push(info.to)
+  }
+  const matches = useMediaQuery('(max-width:600px)')
   return (
     <Paper className={`${classes.headerBottom}`}>
       <BrandLogo onBrandLogoClick={onBrandLogoClick} />
       <Navbar active={active} />
       {active}
       <div item className={classes.headerBottomRight}>
+        {matches ? (
+          <DropDown data={navBarInfo} getDropDownValue={getDropDownValue}>
+            <Menu />
+          </DropDown>
+        ) : null}
+
         <Search className={classes.icon} />
         <Sort className={`${classes.icon} ${classes.sortIcon}`} />
       </div>

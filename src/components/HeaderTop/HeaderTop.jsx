@@ -5,6 +5,8 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import './HeaderTop.css'
 import DropDown from '../DropDown/DropDown'
+import { ExpandMore } from '@material-ui/icons'
+import { languageInfo } from '../../data'
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -25,6 +27,9 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+const dropDownValue = myValue => {
+  console.log('selected language ==>>', myValue)
+}
 const HeaderTop = () => {
   const classes = useStyles()
   return (
@@ -35,7 +40,12 @@ const HeaderTop = () => {
       </Grid>
       <Grid container className={classes.headerTopRight}>
         <IconTextBox icon='alarmon' text='Mon - Fri: 6:30am - 07:45pm' />
-        <DropDown />
+        <DropDown data={languageInfo} getDropDownValue={dropDownValue}>
+          <div style={{ display: 'flex' }}>
+            <IconTextBox icon='language' text='Language' />
+            <ExpandMore />
+          </div>
+        </DropDown>
       </Grid>
     </Paper>
   )
